@@ -38,7 +38,7 @@ class Solution:
         return -1
 
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        hm = defaultdict(list)
+        hm = defaultdict(list)  # a defaultdict never raises a KeyError because it has a default value already.
         for s in strs:
             key = ''.join(sorted(s))
             hm[key].append(s)
@@ -110,3 +110,4 @@ nums = [100, 4, 200, 1, 3, 2]
 # nums = [0, 3, 7, 2, 5, 8, 4, 6, 0, 1]
 nums = [9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6]
 print(solution.longestConsecutive(nums))
+
