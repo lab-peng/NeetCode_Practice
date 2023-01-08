@@ -56,7 +56,6 @@ class Solution:
         return max_area
 
 
-
 solution = Solution()
 s = "A man, a plan, a canal: Panama"
 print(solution.isPalindrome(s))
@@ -64,7 +63,5 @@ print(solution.isPalindrome(s))
 nums = [-1, 0, 1, 2, -1, -4]
 print(solution.threeSum(nums))
 
-height = [1,8,6,2,5,4,8,3,7]
+height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
 print(solution.maxArea(height))
-
-

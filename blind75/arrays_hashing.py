@@ -1,5 +1,5 @@
 from typing import List
-from collections import defaultdict
+from collections import defaultdict, Counter
 
 
 class Solution:
@@ -46,11 +46,12 @@ class Solution:
         return hm.values()
 
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        count = {}
-        for n in nums:
-            count[n] = count.get(n, 0) + 1
-        sorted_keys = sorted(count, key=count.get, reverse=True)
-        return sorted_keys[:k]
+        # count = {}
+        # for n in nums:
+        #     count[n] = count.get(n, 0) + 1
+        # sorted_keys = sorted(count, key=count.get, reverse=True)
+        # return sorted_keys[:k]
+        return [x[0] for x in Counter(nums).most_common(k)]
 
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         res = [1] * (len(nums))
