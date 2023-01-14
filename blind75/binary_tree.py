@@ -131,44 +131,44 @@ def list_to_tree(items: list[int]) -> TreeNode:
 
 
 
-r1 = TreeNode(1)
-n2 = TreeNode(2)
-n3 = TreeNode(3)
-n4 = TreeNode(4)
-n5 = TreeNode(5)
-n6 = TreeNode(6)
-n7 = TreeNode(7)
-
-r1.left = n2
-r1.right = n3
+# r1 = TreeNode(1)
+# n2 = TreeNode(2)
+# n3 = TreeNode(3)
+# n4 = TreeNode(4)
+# n5 = TreeNode(5)
+# n6 = TreeNode(6)
+# n7 = TreeNode(7)
+#
+# r1.left = n2
+# r1.right = n3
+# # n2.left = n4
+# # n2.right = n5
+# n3.left = n6
+# n3.right = n7
+# n7.left = TreeNode(8)
+#
+# r2 = TreeNode(1)
+# n2 = TreeNode(2)
+# n3 = TreeNode(3)
+# n4 = TreeNode(4)
+# n5 = TreeNode(5)
+# n6 = TreeNode(6)
+# n7 = TreeNode(7)
+#
+# r2.left = n2
+# r2.right = n3
 # n2.left = n4
 # n2.right = n5
-n3.left = n6
-n3.right = n7
-n7.left = TreeNode(8)
-
-r2 = TreeNode(1)
-n2 = TreeNode(2)
-n3 = TreeNode(3)
-n4 = TreeNode(4)
-n5 = TreeNode(5)
-n6 = TreeNode(6)
-n7 = TreeNode(7)
-
-r2.left = n2
-r2.right = n3
-n2.left = n4
-n2.right = n5
-n3.left = n6
-n3.right = n7
-
-print('The Graph of R1: ')
-r1.graph()
-print('The Graph of R2: ')
-r2.graph()
-print('R1 Height: ', r1.height())
-print('R1 Depth: ', r1.depth())
-print('R1 Size: ', r1.size())
+# n3.left = n6
+# n3.right = n7
+#
+# print('The Graph of R1: ')
+# r1.graph()
+# print('The Graph of R2: ')
+# r2.graph()
+# print('R1 Height: ', r1.height())
+# print('R1 Depth: ', r1.depth())
+# print('R1 Size: ', r1.size())
 
 
 def is_same_tree(p, q):
@@ -179,15 +179,15 @@ def is_same_tree(p, q):
     return is_same_tree(p.left, q.left) and is_same_tree(p.right, q.right)
 
 
-print('R1 and R2 are the same tree: ', is_same_tree(r1, r2))
-
-r1.invert()
-print('R1 after r1.invert(): ')
-r1.graph()
-
-r1.invert()
-print('R1 after r1.invert() again: ')
-r1.graph()
+# print('R1 and R2 are the same tree: ', is_same_tree(r1, r2))
+#
+# r1.invert()
+# print('R1 after r1.invert(): ')
+# r1.graph()
+#
+# r1.invert()
+# print('R1 after r1.invert() again: ')
+# r1.graph()
 
 
 def inverted(root):
@@ -200,11 +200,11 @@ def inverted(root):
     return root
 
 
-r3 = inverted(r1)  # This will change tree r1, too
-print('Original R1 Graph: ')
-r1.graph()
-print('inverted(R1) Graph: ')
-r3.graph()
+# r3 = inverted(r1)  # This will change tree r1, too
+# print('Original R1 Graph: ')
+# r1.graph()
+# print('inverted(R1) Graph: ')
+# r3.graph()
 
 
 def is_balanced(root):
@@ -220,7 +220,7 @@ def is_balanced(root):
     return is_balanced(root.left) and is_balanced(root.right)
 
 
-print(is_balanced(r1))
+# print(is_balanced(r1))
 
 
 def min_depth(root):
@@ -233,4 +233,4 @@ def min_depth(root):
     return min(left_depth, right_depth) + 1
 
 
-print(min_depth(r1))
+# print(min_depth(r1))
