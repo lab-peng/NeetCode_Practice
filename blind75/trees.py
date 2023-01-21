@@ -198,7 +198,7 @@ class Solution:
         root = TreeNode(preorder[0])
         mid = inorder.index(preorder[0])
         root.left = self.buildTree(preorder[1: 1 + mid], inorder[:mid])
-        root.right = self.buildTree(preorder[1 + mid:], inorder[mid+1:])
+        root.right = self.buildTree(preorder[1 + mid:], inorder[mid + 1:])
         return root
 
 
@@ -231,6 +231,7 @@ class Codec:
         :type data: str
         :rtype: TreeNode
         """
+
 
 # Your Codec object will be instantiated and called as such:
 # ser = Codec()
