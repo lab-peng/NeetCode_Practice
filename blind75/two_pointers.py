@@ -1,12 +1,15 @@
 from typing import List
+import re
 
 
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        processed_str = ''
-        for c in s:
-            if c.isalnum():
-                processed_str += c.lower()
+        # processed_str = ''
+        # for c in s:
+        #     if c.isalnum():
+        #         processed_str += c.lower()
+        processed_str = re.sub(r'[^a-zA-Z0-9]', '', s).lower()
+
         l, r = 0, len(processed_str) - 1
         while l <= r:
             if processed_str[l] != processed_str[r]:
@@ -42,6 +45,23 @@ class Solution:
                     r -= 1
 
         return ans
+
+
+        # n, ans = len(nums), set()
+        # nums.sort()
+        # for i in range(n):
+        #     j, k = i + 1, n - 1
+        #     while j <= k:
+        #         s = nums[i] + nums[j] + nums[k]
+        #         if i != j and i != k and j != k and s == 0:
+        #             ans.add((nums[i], nums[j], nums[k]))
+        #             j += 1
+        #             k -= 1
+        #         elif s > 0:
+        #             k -= 1
+        #         else:
+        #             j += 1
+        # return ans
 
     def maxArea(self, height: List[int]) -> int:
         l, r = 0, len(height) - 1

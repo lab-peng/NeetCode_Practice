@@ -42,7 +42,6 @@ class Solution:
         for s in strs:
             key = ''.join(sorted(s))
             hm[key].append(s)
-            # print(hm)
         return hm.values()
 
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
