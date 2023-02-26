@@ -17,3 +17,6 @@ print(all([n % 2 == 0 for n in nums2]))
 
 print(any([n % 2 == 0 for n in nums1]))
 print(any([n % 2 == 0 for n in nums2]))
+
+
+# deque.append is faster than list.append and it can work like list

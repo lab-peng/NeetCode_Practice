@@ -175,18 +175,6 @@ s = Solution()
 print(s.kthSmallest(root, k))
 
 
-# def preorder(root):
-#     if not root:
-#         return []
-#     return [root.val] + preorder(root.left) + preorder(root.right)
-# def inorder(root):
-#     if not root:
-#         return []
-#     return inorder(root.left) + [root.val] + inorder(root.right)
-# print(preorder(root))
-# print(inorder(root))
-
-
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
         """
@@ -204,7 +192,8 @@ class Solution:
 
 preorder, inorder = [3, 9, 20, 15, 7], [9, 3, 15, 20, 7]
 s = Solution()
-s.buildTree(preorder, inorder).graph()
+root = s.buildTree(preorder, inorder)
+root.graph()
 
 
 class Solution:
